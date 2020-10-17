@@ -138,8 +138,8 @@ def combine_teams
 end
   
 def num_points_scored(player)
-  both_teams = combine_teams
-  both_teams.each do |name|
+  game_hash.each do |team|
+  team.each do |name|
     if name[:player_name] == player 
       return name[:points]
   end 
