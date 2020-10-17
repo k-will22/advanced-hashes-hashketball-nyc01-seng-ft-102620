@@ -222,11 +222,11 @@ def big_shoe_rebounds
 end 
 
 def most_points_scored 
-  largest_shoe_size = 0 
-  player_with_largest_shoe = nil 
+  most_points = 0 
+  player_with_most_points = nil 
   game_hash.each do |city, data|
     data[:players].each_entry do |name|
-      if name[:shoe] > largest_shoe_size
+      if name[:points] > largest_shoe_size
         largest_shoe_size = name[:shoe]
         player_with_largest_shoe = name
       end 
