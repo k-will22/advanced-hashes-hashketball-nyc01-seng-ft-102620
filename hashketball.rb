@@ -265,7 +265,7 @@ def player_with_longest_name
   longest_name = 0 
   player_with_longest = nil  
   game_hash.each_key do |city, data|
-    data[:players].each_entry do |name|
+    data[:players].each_key do |name|
       if name[:player_name].length.to_i > longest_name
         longest_name = name[:playaer_name]
         player_with_longest = name[:player_name]
