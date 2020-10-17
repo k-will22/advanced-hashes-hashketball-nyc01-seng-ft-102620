@@ -233,5 +233,5 @@ def most_points_scored
     end 
   end 
   player_with_most_points
+binding.pry 
 end 
-binding.pry
