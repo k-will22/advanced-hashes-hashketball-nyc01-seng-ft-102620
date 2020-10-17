@@ -267,4 +267,5 @@ max_steals = longest.values.max
 longest[longest.key(max_steals)] == max_steals
   end 
 end 
+end 
 binding.pry 
