@@ -209,7 +209,7 @@ def most_points_scored
   end 
   return player_with_most_points
 end 
-binding.pry 
+
 def winning_team 
   top_team = {}
   game_hash.values.each do |team|
@@ -219,9 +219,9 @@ def winning_team
     end 
     top_team[team[:team_name]] = team_points 
   end 
-  top_team.key(top_team.values.max)
+  return top_team.key(top_team.values.max)
 end 
- 
+binding.pry 
 def player_with_longest_name
   longest_name = []
   game_hash.values.each do |team|
