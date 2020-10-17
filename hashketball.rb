@@ -236,14 +236,28 @@ def most_points_scored
 end 
 
 def winning_team
-  home_players_points = game_hash[:home][:players][:points].sum 
-  away_players_points = game_hash[:away][:players][:points].sum
-  if home_players_points > away_players_points 
-    return game_hash[:home]
-      elsif home_players_points == away_players_points 
-    return "tie"
-      else 
-    return game_hash[:away]
+  home_team_points = 0 
+  away_team_points = 0
+  game_hash.each do |city, team|
+    if city == :home 
+      team.each do |att, data| 
+        if att == :players 
+          data.each do |player, stats|
+            home_team_points += stats[:points]
+          end 
+        end 
+      end 
+    else team.each do |player, stats|
+      away_team_points += stats[:points]
+    end 
+  end 
+end
+end 
+end
+ if home_team_points > away_team_points 
+   return game_hash[:home][:team_name]
+ else 
+   return game_hash[:away][:team_name] 
  end 
 end
 binding.pry 
