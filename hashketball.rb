@@ -246,7 +246,7 @@ def winning_team
     return game_hash[:away]
  end 
 end
-
+binding.pry 
 def player_with_longest_name
   longest_name = 0 
   player_with_longest = nil  
