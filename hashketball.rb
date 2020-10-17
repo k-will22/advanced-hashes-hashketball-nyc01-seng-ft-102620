@@ -130,11 +130,10 @@ end
 
 # Write code here
 def num_points_scored(player)
- game_hash.each_key do |team|
-   game_hash[team][:players].each_entry do |stats|
-    if stats[:player_name] == player 
-      return stats[:points] 
-   end 
+ game_hash.values.each do |team|
+   team[:players].each do |stats|
+    return stats[:points] if player.has_value?(stats)
+      return stats[:points]
   end 
  end 
 end 
