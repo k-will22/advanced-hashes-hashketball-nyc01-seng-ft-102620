@@ -265,11 +265,7 @@ def winning_team
   end 
   top_team.key(top_team.values.max)
 end 
-   if home_team_points > away_team_points 
-   return game_hash[:home][:team_name]
- else 
-   return game_hash[:away][:team_name] 
- end 
+  
 binding.pry
 def player_with_longest_name
   longest_name = 0 
