@@ -272,7 +272,7 @@ binding.pry
  else 
    return game_hash[:away][:team_name] 
  end 
-end 
+
 binding.pry 
 def player_with_longest_name
   longest_name = 0 
