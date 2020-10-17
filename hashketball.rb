@@ -226,7 +226,7 @@ def most_points_scored
   player_with_most_points = nil 
   game_hash.each do |city, data|
     data[:players].each_entry do |name|
-      if name[:points] > largest_shoe_size
+      if name[:points] > most_points
         most_points = name[:points]
         player_with_most_points = name[:player_name]
       end 
