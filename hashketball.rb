@@ -128,6 +128,6 @@ end
 
 # Write code here
 def num_points_scored(player)
-  game_hash[:home][:players][:points]
-  game_hash[:away][:players][:points]
+  game_hash[:home][:players][:points].to_s
+  game_hash[:away][:players][:points].to_s 
 end 
