@@ -176,9 +176,9 @@ end
  
  def player_numbers(team)
    array = []
-   game_hash.each_key do |city|
+   game_hash.values.each do |city|
      if game_hash[city][:team_name] == team 
-       game_hash[city][:players].each_entry do |name|
+       game_hash[city][:players].each do |name|
          array.push(name[:number])
        end 
      end 
