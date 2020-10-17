@@ -150,6 +150,7 @@ def shoe_size(player)
   both_teams.each do |name|
     if name[:player_name] == player 
       return name[:shoe] 
+  end 
 end 
 
 def team_colors(team)
