@@ -236,5 +236,16 @@ def most_points_scored
 end 
 
 def player_with_longest_name
-  
-  
+  longest_name = 0 
+  player_with_longest = nil 
+  game_hash.each do |city, data|
+    data[:players].each_entry do |name|
+      if name[:player_name].length > longest_name
+        longest_name = name[:playaer_name]
+        player_with_longest = name[:player_name]
+      end 
+    end 
+  end 
+  player_with_longest 
+end 
+binding.pry  
