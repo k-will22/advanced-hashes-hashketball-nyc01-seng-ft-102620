@@ -150,5 +150,6 @@ def shoe_size(player)
 end 
 
 def team_colors(team)
-  game_hash[:away][:colors]
+  game_hash.each_key do |stats|
+  game_hash[stats][:colors]
 end 
