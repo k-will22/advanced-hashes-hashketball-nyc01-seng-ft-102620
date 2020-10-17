@@ -265,6 +265,7 @@ def winning_team
   end 
   top_team.key(top_team.values.max)
 end 
+end 
 binding.pry 
 
  if home_team_points > away_team_points 
