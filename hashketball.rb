@@ -156,5 +156,10 @@ def shoe_size(player)
 end 
 
 def team_colors(team)
- 
+ both_teams = combine_teams
+  both_teams.each do |city|
+    if city[:team_name] == team 
+      return name[:shoe] 
+  end 
+ end 
 end 
