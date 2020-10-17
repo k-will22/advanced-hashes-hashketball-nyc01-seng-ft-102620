@@ -208,7 +208,6 @@ def find_player_with_longest_shoe
     end 
   end 
   player_with_largest_shoe 
-binding.pry 
 end 
 
 def big_shoe_rebounds 
