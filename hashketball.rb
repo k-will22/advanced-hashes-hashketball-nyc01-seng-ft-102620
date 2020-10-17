@@ -234,26 +234,7 @@ def most_points_scored
   end 
   player_with_most_points
 end 
-=begin
-def winning_team
-  home_team_points = 0 
-  away_team_points = 0
-  game_hash.each_entry do |city, team|
-    if city == :home 
-      team.each do |att, data| 
-        if att == :players 
-          data.each_entry do |player, stats|
-            home_team_points += stats[:points]
-          end 
-        end 
-      end 
-    else team.each_entry do |player, stats|
-      away_team_points += stats[:points]
-    end 
-  end 
-end
-=end 
-
+binding.pry 
 def winning_team 
   top_team = {}
   game_hash.values.each_entry do |team_info|
