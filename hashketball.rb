@@ -274,7 +274,7 @@ def player_with_longest_name
   end 
   player_with_longest 
 end 
-
+binding.pry 
 def long_name_steals_a_ton?
   most_steals = 0 
   player_with_most_steals = "player"
@@ -293,5 +293,5 @@ def long_name_steals_a_ton?
   if player_with_most_steals == player_with_longest_name 
     return true 
   end
-binding.pry 
+
 end 
