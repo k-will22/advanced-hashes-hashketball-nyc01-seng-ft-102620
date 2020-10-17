@@ -238,16 +238,16 @@ end
 def winning_team
   home_team_points = 0 
   away_team_points = 0
-  game_hash.each do |city, team|
+  game_hash.each_entry do |city, team|
     if city == :home 
       team.each do |att, data| 
         if att == :players 
-          data.each do |player, stats|
+          data.each_entry do |player, stats|
             home_team_points += stats[:points]
           end 
         end 
       end 
-    else team.each do |player, stats|
+    else team.each_entry do |player, stats|
       away_team_points += stats[:points]
     end 
   end 
@@ -264,7 +264,7 @@ binding.pry
 def player_with_longest_name
   longest_name = 0 
   player_with_longest = nil  
-  game_hash.each do |city, data|
+  game_hash.each_entry do |city, data|
     data[:players].each_entry do |name|
       if name[:player_name].length.to_i > longest_name
         longest_name = name[:playaer_name]
