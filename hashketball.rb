@@ -260,7 +260,7 @@ end
    return game_hash[:away][:team_name] 
  end 
 end 
-
+binding.pry 
 def player_with_longest_name
   longest_name = 0 
   player_with_longest = nil  
@@ -274,7 +274,7 @@ def player_with_longest_name
   end 
   player_with_longest 
 end 
-binding.pry 
+
 def long_name_steals_a_ton?
   most_steals = 0 
   player_with_most_steals = "player"
