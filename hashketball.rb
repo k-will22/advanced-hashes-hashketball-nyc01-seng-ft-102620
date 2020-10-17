@@ -186,3 +186,11 @@ end
    return array 
  end 
  
+def player_stats(player)
+  game_hash.each_key do |team| 
+    game_hash[team][:players].each_entry do |stats|
+      if name[:player_name] == player 
+        return stats 
+      end 
+    end 
+  end 
