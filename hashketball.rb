@@ -235,7 +235,7 @@ def winning_team
   end 
   top_team.key(top_team.values.max)
 end 
-binding.pry   
+ 
 def player_with_longest_name
   longest_name = []
   game_hash.values.each do |team_info|
@@ -255,6 +255,3 @@ def long_name_steals_a_ton?
 max_steals = longest.values.max 
 longest[longest.key(max_steals)] == max_steals
   end 
-
-
-binding.pry 
