@@ -153,6 +153,7 @@ def num_points_scored(player)
       return player[:points]
     end 
   end 
+end 
   
 def shoe_size(player)
   both_teams = combine_teams 
@@ -161,6 +162,7 @@ def shoe_size(player)
       return player[:shoe]
   end 
  end 
+end
  
  def team_colors(team)
    
