@@ -127,8 +127,9 @@ def game_hash
 end
 
 # Write code here
-def 
+def team_merge 
+  game_hash[:home][:players].merge(game_hash[:away][:players])
 
 def num_points_scored 
-  game_hash[:player][:score]
+  team_merge[:player][:score]
 end 
