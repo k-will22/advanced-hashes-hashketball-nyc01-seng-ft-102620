@@ -157,7 +157,7 @@ end
    team_names = []
    team_names << game_hash[:home][:team_name]
    team_names << game_hash[:away][:team_name]
-   team_names
+   return team_names
  end 
  
  def player_numbers(team)
@@ -207,9 +207,9 @@ def most_points_scored
       end 
     end 
   end 
-  player_with_most_points
+  return player_with_most_points
 end 
-
+binding.pry 
 def winning_team 
   top_team = {}
   game_hash.values.each do |team|
