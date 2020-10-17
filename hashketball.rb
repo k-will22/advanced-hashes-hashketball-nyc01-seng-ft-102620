@@ -203,7 +203,7 @@ def find_player_with_longest_shoe
     data[:players].each_entry do |name|
       if name[:shoe] > largest_shoe_size
         largest_shoe_size = name[:shoe]
-        player_with_largest_shoe = name[:player_name] 
+        player_with_largest_shoe = name
       end 
     end 
   end 
