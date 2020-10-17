@@ -229,9 +229,9 @@ def most_points_scored
       if name[:points] > largest_shoe_size
         most_points = name[:points]
         player_with_most_points = name[:player_name]
+binding.pry 
       end 
     end 
   end 
   player_with_most_points
-binding.pry 
 end 
