@@ -147,7 +147,7 @@ end
 end 
 
 def shoe_size(player)
-  endboth_teams = combine_teams
+  both_teams = combine_teams
   both_teams.each do |name|
     if name[:player_name] == player 
       return name[:shoe] 
