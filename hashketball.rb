@@ -146,14 +146,15 @@ def combine_teams
   both_teams
 end 
   
-def num_points_scored(player_name)
-  both_teams = combine_teams 
-  both_teams.each_entry do |player|
-    if player[:player_name] == player_name 
-      return player_name[:points]
+def num_points_scored(player)
+  game_hash.each_entry do |team|
+    game_hash[team][:players].each_entry do |name|
+    if name[:player_name] == player 
+      return name[:points]
     end 
   end 
-end 
+ end
+end
   
 def shoe_size(player)
   both_teams = combine_teams 
