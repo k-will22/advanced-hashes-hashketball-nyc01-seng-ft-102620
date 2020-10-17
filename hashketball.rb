@@ -128,6 +128,12 @@ end
 
 # Write code here
 def num_points_scored(player)
-  game_hash[:home][:players][:points].to_s
-  game_hash[:away][:players][:points].to_s 
+  game_hash().each do |location, data| 
+    data[:players].each do |name, stat| 
+      if player == name 
+        return stat[:points]
+      end 
+    end 
+  end 
+end 
 end 
