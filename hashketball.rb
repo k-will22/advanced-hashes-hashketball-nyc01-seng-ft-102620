@@ -151,5 +151,5 @@ end
 
 def team_colors(team)
   game_hash.each_key do |stats|
-  game_hash[stats][:colors]
+  game_hash[stats][:colors].each_entry
 end 
