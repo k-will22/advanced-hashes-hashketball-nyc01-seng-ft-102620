@@ -176,12 +176,13 @@ end
  
  def player_numbers(team)
    array = []
-   game_hash.each_key do |city|
-     if game_hash[city][:team_name] == team 
-       game_hash[city][:players].each_entry do |play|
-         array.push(play[:number])
+   game_hash.each_key do |city, info|
+     if info[:team_name] == team 
+       info[:players].each_entry do |name, stats|
+         array << stats[:number]
        end 
      end 
    end 
+   return array 
  end 
  
