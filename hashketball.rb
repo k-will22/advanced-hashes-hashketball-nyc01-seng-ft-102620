@@ -235,6 +235,18 @@ def most_points_scored
   player_with_most_points
 end 
 
+def winning_team
+  home_players_points = game_hash[:home][:players][:points]
+  away_players_points = game_hash[:away][:players][:points]
+  if home_players_points.sum > away_players_points.sum 
+    return game_hash[:home]
+      elsif home_players_points.sum == away_players_points.sum 
+    return "tie"
+      else 
+    return game_hash[:away]
+ end 
+end
+
 def player_with_longest_name
   longest_name = 0 
   player_with_longest = nil  
@@ -248,4 +260,3 @@ def player_with_longest_name
   end 
   player_with_longest 
 end 
-binding.pry  
