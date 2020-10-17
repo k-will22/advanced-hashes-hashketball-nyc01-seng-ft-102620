@@ -131,7 +131,6 @@ end
 # Write code here
 def num_points_scored(player)
   game_hash.each do |home, away|
-    home
 binding.pry 
   end 
 end 
