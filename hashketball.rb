@@ -130,7 +130,7 @@ end
 
 # Write code here
 def num_points_scored(player)
-  game_hash.each_entry do |team|
+  game_hash.each_key do |team|
     game_hash[team][:players].each_entry do |stats| 
     if stats[:player_name] == player 
       return stats[:points]
@@ -140,7 +140,7 @@ def num_points_scored(player)
 end 
 
 def shoe_size(player)
-  game_hash.each_entry do |team|
+  game_hash.each_key do |team|
     game_hash[team][:players].each_entry do |stats| 
     if stats[:player_name] == player 
       return stats[:shoe]
@@ -150,7 +150,7 @@ def shoe_size(player)
 end 
 
 def team_colors(team)
-  game_hash.each_entry do |stats|
+  game_hash.each_key do |stats|
     if team == stats[:team_name]
       return stats[:colors]
     end 
