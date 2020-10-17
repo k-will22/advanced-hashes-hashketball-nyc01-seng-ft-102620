@@ -223,9 +223,9 @@ end
 
 def most_points_scored 
   most_points = 0 
-  player_with_most_points = nil 
-  game_hash.each do |city, data|
-    data[:players].each_entry do |name|
+  player_with_most_points = "" 
+  game_hash.values.each do |data|
+    data[:players].each do |name|
       if name[:points] > most_points
         most_points = name[:points]
         player_with_most_points = name[:player_name]
@@ -234,7 +234,7 @@ def most_points_scored
   end 
   player_with_most_points
 end 
-
+binding.pry 
 def winning_team 
   top_team = {}
   game_hash.values.each do |team_info|
