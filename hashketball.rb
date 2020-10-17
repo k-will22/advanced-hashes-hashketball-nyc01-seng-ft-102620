@@ -234,7 +234,7 @@ def most_points_scored
   end 
   player_with_most_points
 end 
-binding.pry 
+
 def winning_team 
   top_team = {}
   game_hash.values.each_entry do |team_info|
@@ -247,21 +247,16 @@ def winning_team
   top_team.key(top_team.values.max)
 end 
   
-binding.pry
 def player_with_longest_name
-  longest_name = 0 
-  player_with_longest = nil  
-  game_hash.each do |city, data|
-    data[:players].each do |name|
-      if name[:player_name].length.to_i > longest_name
-        longest_name = name[:playaer_name]
-        player_with_longest = name[:player_name]
-      end 
+  longest_name = []
+  game_hash.values.each do |team_info|
+    team_info[:players].each do |player|
+      longest_name << player[:player_name]
     end 
   end 
-  player_with_longest 
+  longest_name.max_by{|name| name.length}
 end 
-
+binding.pry 
 def long_name_steals_a_ton?
   most_steals = 0 
   player_with_most_steals = "player"
