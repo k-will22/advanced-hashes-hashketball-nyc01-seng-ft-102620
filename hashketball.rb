@@ -256,7 +256,7 @@ end
 
 def winning_team 
   top_team = {}
-  game_hash.values.each_key do |team_info|
+  game_hash.values.each_entry do |team_info|
     team_points = 0 
     team_info[:players].each_entry do |player|
       team_points += player[:points]
