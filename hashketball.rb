@@ -178,7 +178,7 @@ end
    array = []
    game_hash.each_entry do |city, info|
      if info[:team_name] == team 
-       info[:players].each_key do |name, stats|
+       info[:players].each_entry do |name, stats|
          array << stats[:number]
        end 
      end 
