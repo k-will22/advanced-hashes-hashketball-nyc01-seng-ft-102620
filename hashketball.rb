@@ -223,7 +223,7 @@ def most_points_scored
   end 
   player_with_most_points
 end 
-binding.pry 
+
 def winning_team 
   top_team = {}
   game_hash.values.each do |team_info|
