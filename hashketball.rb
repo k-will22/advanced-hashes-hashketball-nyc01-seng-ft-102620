@@ -152,6 +152,7 @@ def shoe_size(player)
       return name[:shoe] 
   end 
 end 
+end 
 
 def team_colors(team)
  
