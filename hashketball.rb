@@ -144,6 +144,7 @@ def combine_teams
   away_team = game_hash[:away][:players]
   both_teams = home_team.concat away_team 
   both_teams
+end 
   
 def num_points_scored(player)
   both_teams = combine_teams 
