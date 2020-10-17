@@ -146,7 +146,12 @@ def combine_teams
   both_teams
   
 def num_points_scored(player)
-  
+  both_teams = combine_teams 
+  both_teams.each do |name|
+    if name[:player_name] == player 
+      return player[:points]
+    end 
+  end 
   
 def shoe_size(player)
   both_teams = combine_teams 
@@ -159,4 +164,4 @@ def shoe_size(player)
  def team_colors(team)
    
    end 
- end 
+ 
