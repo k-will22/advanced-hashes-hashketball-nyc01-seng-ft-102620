@@ -199,8 +199,8 @@ end
 def find_player_with_longest_shoe 
   largest_shoe_size = nil 
   player_with_largest_shoe = nil 
-  game_hash.each do |city, data|
-    data[:players].each do |name, stats|
+  game_hash.each.entry do |city, data|
+    data[:players].each.entry do |name, stats|
       if largest_shoe_size = nil || stats[:shoe] > largest_shoe_size
         largest_shoe_size = stats[:shoe]
         player_with_largest_shoe = name 
@@ -212,7 +212,7 @@ end
 
 def big_shoe_rebounds 
   player_with_largest_shoe = find_player_with_longest_shoe()
-  game_hash.each do |city, stats|
+  game_hash.each.entry do |city, stats|
     stats[:players].each do |name, data|
       if name == player_with_largest_shoe
         return data[:rebounds]
