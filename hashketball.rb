@@ -132,7 +132,7 @@ end
 def num_points_scored(player)
  game_hash.values.each do |team|
    team[:players].each do |stats|
-    return stats[:points] if player.has_value?(stats)
+    return stats[:points] if stats.has_value?(player)
   end 
  end 
 end 
@@ -140,7 +140,7 @@ end
 def num_points_scored(player)
   game_hash.values.each do |team|
    team[:players].each do |stats|
-    return stats[:shoe] if player.has_value?(stats)
+    return stats[:shoe] if stats.has_value?(player)
   end 
  end 
 end 
