@@ -197,7 +197,7 @@ def player_stats(player)
 end 
 
 def find_player_with_longest_shoe 
-  largest_shoe_size = nil 
+  largest_shoe_size = 1 
   player_with_largest_shoe = nil 
   game_hash.each do |city, data|
     data[:players].each_entry do |name|
