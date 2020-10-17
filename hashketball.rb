@@ -178,8 +178,8 @@ end
    array = []
    game_hash.each_key do |city|
      if game_hash[city][:team_name] == team 
-       game_hash[city][:players].each_entry do |players|
-         array.push(players[:number])
+       game_hash[city][:players].each_entry do |play|
+         array.push(play[:number])
        end 
      end 
    end 
