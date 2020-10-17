@@ -139,13 +139,6 @@ def num_points_scored(player)
  end 
 end 
 
-def combine_teams
-  home_team = game_hash[:home][:players]
-  away_team = game_hash[:away][:players]
-  both_teams = home_team.concat away_team 
-  both_teams
-end 
-  
 def num_points_scored(player)
   game_hash.each_key do |team|
     game_hash[team][:players].each_entry do |name|
@@ -167,6 +160,10 @@ def shoe_size(player)
 end
  
  def team_colors(team)
-   
+   game_hash.each_key do |city|
+     if game_hash[city][:team_name] == team 
+       return game_hash[city][:colors]
    end 
+  end 
+ end 
  
