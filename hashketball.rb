@@ -185,8 +185,8 @@ end
 def big_shoe_rebounds 
   biggest_shoe = 0 
   player_rebounds = 0 
-  game_hash.values.each do |team_info|
-    team_info[:players].each do |player|
+  game_hash.values.each do |team|
+    team[:players].each do |player|
       if player[:shoe] > biggest_shoe 
         biggest_shoe = player[:shoe]
         player_rebounds = player[:rebounds]
@@ -212,20 +212,20 @@ end
 
 def winning_team 
   top_team = {}
-  game_hash.values.each do |team_info|
+  game_hash.values.each do |team|
     team_points = 0 
-    team_info[:players].each do |player|
+    team[:players].each do |player|
       team_points += player[:points]
     end 
-    top_team[team_info[:team_name]] = team_points 
+    top_team[team[:team_name]] = team_points 
   end 
   top_team.key(top_team.values.max)
 end 
  
 def player_with_longest_name
   longest_name = []
-  game_hash.values.each do |team_info|
-    team_info[:players].each do |player|
+  game_hash.values.each do |team|
+    team[:players].each do |player|
       longest_name << player[:player_name]
     end 
   end 
