@@ -197,16 +197,19 @@ def player_stats(player)
 end 
 
 def big_shoe_rebounds 
-  player_with_largest_shoe = find_player_with_longest_shoe()
-  game_hash.each do |city, stats|
-    stats[:players].each do |name|
-      if name == player_with_largest_shoe
-        return name[:rebounds]
+  biggest_shoe = 0 
+  player_rebounds = 0 
+  game_hash.values.each do |team_info|
+    team_info[:players].each do |player|
+      if player[:shoe] > biggest_shoe 
+        biggest_shoe = player[:shoe]
+        player_rebounds = player[:rebounds]
       end 
-    end 
-  end 
+    end
+  end
+  return player_rebounds
 end 
-
+binding.pry 
 def most_points_scored 
   most_points = 0 
   player_with_most_points = "" 
